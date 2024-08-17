@@ -1,5 +1,11 @@
 ```
 rule-providers:
+ Netease_Cloud_Music:
+  type: http
+  behavior: domain
+  url: "https://raw.githubusercontent.com/Wacchi-Lorie/clash-rules-backup/main/ncm.yaml"
+  path: ./providers/rule-provider_FuckAdobe.yaml
+  interval: 86400
  FuckAdobe_domain:
   type: http
   behavior: domain
