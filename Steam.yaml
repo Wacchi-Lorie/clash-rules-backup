@@ -1,0 +1,12 @@
+payload:
+  - DOMAIN,steamstat.com
+  - DOMAIN,steamgames.com
+  - DOMAIN,akamaihd.net
+  - DOMAIN,steamstat.us
+  - DOMAIN,cdn.steampowered.com
+  - DOMAIN,steamusercontent.com
+  - DOMAIN,steamcontent.com
+  - DOMAIN,steamstatic.com
+  - DOMAIN,steam-chat.com
+  - DOMAIN-SUFFIX,cm.steampowered.com
+  - DOMAIN-SUFFIX,steamcontent.com
