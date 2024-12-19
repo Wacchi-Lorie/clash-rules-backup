@@ -127,7 +127,7 @@ proxy-groups:
       - 🇺🇸 USA
       - 🇸🇬 Singapore
       - 🇨🇳 China
-  - name: 🎮 Steam 1
+  - name: 🎮 Steam
     type: select
     proxies:
       - 🎯 Local
@@ -140,7 +140,7 @@ proxy-groups:
       - 🇺🇸 USA
       - 🇸🇬 Singapore
       - 🇨🇳 China
-  - name: 🎮 Steam 2
+  - name: 🎮 Steam test
     type: select
     proxies:
       - 🎯 Local
@@ -252,9 +252,9 @@ rules:
  - RULE-SET,niconico,📺ニコニコ動画
 
  # steam group
- - DOMAIN,steamserver.net,🎮 Steam 1
- - RULE-SET,Steam_ipcidr,🎮 Steam 2
- - RULE-SET,Steam_domain,🎮 Steam 2
+ - RULE-SET,Steam_test,🎮 Steam test
+ - RULE-SET,Steam_ipcidr,🎮 Steam
+ - RULE-SET,Steam_domain,🎮 Steam
 
  # microsoft group
  - DOMAIN-KEYWORD,1drv,Ⓜ️ Microsoft
@@ -410,4 +410,10 @@ rule-providers:
   behavior: ipcidr
   url: "https://raw.githubusercontent.com/Wacchi-Lorie/clash-rules-backup/main/rule-provider_BilibiliHMT_ipcidr.yaml"
   path: ./providers/rule-provider_BilibiliHMT_ipcidr.yaml
+  interval: 86400
+ Steam_test:
+  type: http
+  behavior: classical
+  url: "https://raw.githubusercontent.com/Wacchi-Lorie/clash-rules-backup/main/Steam_test.yaml"
+  path: ./providers/Steam_test.yaml
   interval: 86400
