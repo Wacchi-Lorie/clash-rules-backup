@@ -1,4 +1,2 @@
 payload:
-  - DOMAIN,store.steampowered.com
-  - DOMAIN,api.steampowered.com
-  - DOMAIN-SUFFIX,steamcontent.com
+  - DOMAIN-SUFFIX,steamserver.net
