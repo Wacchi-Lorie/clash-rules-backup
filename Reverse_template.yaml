@@ -225,6 +225,8 @@ proxy-groups:
       - REJECT
       - DIRECT
 rules:
+ # highest override
+ - DOMAIN,test.steampowered.net,🎮 Steam test
  # local direct
  - RULE-SET,lancidr,DIRECT,no-resolve
  - RULE-SET,private,DIRECT,no-resolve
