@@ -1,3 +1,4 @@
 payload:
-  - DOMAIN,	test.steampowered.com
-  - DOMAIN-SUFFIX,steamstat
+  - DOMAIN,store.steampowered.com
+  - DOMAIN,api.steampowered.com
+  - DOMAIN-SUFFIX,steamcontent.com
