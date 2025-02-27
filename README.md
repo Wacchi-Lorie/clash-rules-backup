@@ -229,3 +229,4 @@ rule-providers:
   path: ./providers/rule-provider_GuoNeiWangZhan_ipcidr.yaml
   interval: 86400
 ```
+a
