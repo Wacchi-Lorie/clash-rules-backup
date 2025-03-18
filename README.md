@@ -1,231 +1,206 @@
 ```
 rule-providers:
- Netease_Cloud_Music:
+# loyalsoldier clash rules
+ reject:
   type: http
   behavior: domain
-  url: "https://raw.githubusercontent.com/Wacchi-Lorie/clash-rules-backup/main/ncm.yaml"
-  path: ./providers/rule-provider_FuckAdobe.yaml
+  url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt"
+  path: ./ruleset/reject.yaml
   interval: 86400
- FuckAdobe_domain:
+ proxy:
   type: http
   behavior: domain
-  url: "https://raw.githubusercontent.com/Wacchi-Lorie/clash-rules-backup/main/rule-provider_FuckAdobe.yaml"
-  path: ./providers/rule-provider_FuckAdobe.yaml
+  url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/proxy.txt"
+  path: ./ruleset/proxy.yaml
+  interval: 86400
+ CN_DIRECT:
+  type: http
+  behavior: domain
+  url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/direct.txt"
+  path: ./ruleset/direct.yaml
+  interval: 86400
+ private:
+  type: http
+  behavior: domain
+  url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/private.txt"
+  path: ./ruleset/private.yaml
+  interval: 86400
+ gfw:
+  type: http
+  behavior: domain
+  url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/gfw.txt"
+  path: ./ruleset/gfw.yaml
+  interval: 86400
+ tld-not-cn:
+  type: http
+  behavior: domain
+  url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/tld-not-cn.txt"
+  path: ./ruleset/tld-not-cn.yaml
+  interval: 86400
+ cncidr:
+  type: http
+  behavior: ipcidr
+  url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/cncidr.txt"
+  path: ./ruleset/cncidr.yaml
+  interval: 86400
+ lancidr:
+  type: http
+  behavior: ipcidr
+  url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/lancidr.txt"
+  path: ./ruleset/lancidr.yaml
+  interval: 86400
+# a-dove-is-dumb domains
+ FuckAdobe:
+  type: http
+  behavior: classical
+  url: "https://cdn.jsdelivr.net/gh/ignaciocastro/a-dove-is-dumb@main/clash.yaml"
+  path: ./providers/FuckAdobe.yaml
+  interval: 86400
+# ios_rule_script platforms domains
+ Niconico:
+  type: http
+  behavior: classical
+  url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Niconico/Niconico_No_Resolve.yaml"
+  path: ./ruleset/Niconico.yaml
+  interval: 86400
+ Steam:
+  type: http
+  behavior: classical
+  url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Steam/Steam_No_Resolve.yaml"
+  path: ./providers/Steam.yaml
+  interval: 86400
+ Paypal:
+  type: http
+  behavior: classical
+  url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/PayPal/PayPal_No_Resolve.yaml"
+  path: ./providers/PayPal.yaml
+  interval: 86400
+ Bahamut:
+  type: http
+  behavior: classical
+  url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Bahamut/Bahamut_No_Resolve.yaml"
+  path: ./providers/Bahamut.yaml
+  interval: 86400
+ Apple:
+  type: http
+  behavior: classical
+  url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Apple/Apple_Classical_No_Resolve.yaml"
+  path: ./providers/Apple.yaml
+  interval: 86400
+ Microsoft:
+  type: http
+  behavior: classical
+  url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Microsoft/Microsoft_No_Resolve.yaml"
+  path: ./providers/Microsoft.yaml
+  interval: 86400
+ Spotify:
+  type: http
+  behavior: classical
+  url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Spotify/Spotify_No_Resolve.yaml"
+  path: ./providers/Spotify.yaml
+  interval: 86400
+ BiliBili:
+  type: http
+  behavior: classical
+  url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/BiliBili/BiliBili_No_Resolve.yaml"
+  path: ./providers/BiliBili.yaml
+  interval: 86400
+ Youtube:
+  type: http
+  behavior: classical
+  url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/YouTube/YouTube_No_Resolve.yaml"
+  path: ./providers/Youtube.yaml
+  interval: 86400
+ Netflix:
+  type: http
+  behavior: classical
+  url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Netflix/Netflix_Classical_No_Resolve.yaml"
+  path: ./providers/Netflix.yaml
+  interval: 86400
+ Amazon_Prime:
+  type: http
+  behavior: classical
+  url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/AmazonPrimeVideo/AmazonPrimeVideo_No_Resolve.yaml"
+  path: ./providers/Amazon_Prime.yaml
+  interval: 86400
+ Disney_Plus:
+  type: http
+  behavior: classical
+  url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Disney/Disney_No_Resolve.yaml"
+  path: ./providers/Disney_Plus.yaml
+  interval: 86400
+ HBO:
+  type: http
+  behavior: classical
+  url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/HBO/HBO_No_Resolve.yaml"
+  path: ./providers/HBO.yaml
+  interval: 86400
+ Emby:
+  type: http
+  behavior: classical
+  url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Emby/Emby_No_Resolve.yaml"
+  path: ./providers/Emby.yaml
+  interval: 86400
+ iQIYI:
+  type: http
+  behavior: classical
+  url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/iQIYI/iQIYI_No_Resolve.yaml"
+  path: ./providers/iQIYI.yaml
+  interval: 86400
+ Private_Tracker:
+  type: http
+  behavior: classical
+  url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/PrivateTracker/PrivateTracker_No_Resolve.yaml"
+  path: ./providers/Private_Tracker.yaml
+  interval: 86400
+# acl4ssr rules
+ BanAD:
+  type: http
+  behavior: classical
+  url: "https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Providers/BanAD.yaml"
+  path: ./providers/BanAD.yaml
+  interval: 86400
+ China_Domain:
+  type: http
+  behavior: classical
+  url: "https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Providers/ChinaDomain.yaml"
+  path: ./providers/China_Domain.yaml
+  interval: 86400
+ China_IP:
+  type: http
+  behavior: ipcidr
+  url: "https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Providers/ChinaIp.yaml"
+  path: ./providers/China_IP.yaml
+  interval: 86400
+ China_IP6:
+  type: http
+  behavior: classical
+  url: "https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Providers/ChinaIpV6.yaml"
+  path: ./providers/China_IP6.yaml
+  interval: 86400
+# wacchi-lorie backup rules
+ Steam_test:
+  type: http
+  behavior: classical
+  url: "https://cdn.jsdelivr.net/gh/Wacchi-Lorie/clash-rules-backup@main/Steam_test.yaml"
+  path: ./providers/Steam_test.yaml
   interval: 86400
  GamePlatform_domain:
   type: http
   behavior: domain
-  url: "https://raw.githubusercontent.com/Wacchi-Lorie/clash-rules-backup/main/rule-provider_YouXiPingTai_domain.yaml"
+  url: "https://cdn.jsdelivr.net/gh/Wacchi-Lorie/clash-rules-backup/rule-provider_YouXiPingTai_domain.yaml"
   path: ./providers/rule-provider_YouXiPingTai_domain.yaml
   interval: 86400
  SocialAPP_domain:
   type: http
   behavior: domain
-  url: "https://raw.githubusercontent.com/Wacchi-Lorie/clash-rules-backup/main/rule-provider_LiaoTianRuanJian_domain.yaml"
+  url: "https://cdn.jsdelivr.net/gh/Wacchi-Lorie/clash-rules-backup@main/rule-provider_LiaoTianRuanJian_domain.yaml"
   path: ./providers/rule-provider_LiaoTianRuanJian_domain.yaml
   interval: 86400
  SocialAPP_ipcidr:
   type: http
   behavior: ipcidr
-  url: "https://raw.githubusercontent.com/Wacchi-Lorie/clash-rules-backup/main/rule-provider_LiaoTianRuanJian_ipcidr.yaml"
+  url: "https://cdn.jsdelivr.net/gh/Wacchi-Lorie/clash-rules-backup@main/rule-provider_LiaoTianRuanJian_ipcidr.yaml"
   path: ./providers/rule-provider_LiaoTianRuanJian_ipcidr.yaml
-  interval: 86400
- Bahamut_domain:
-  type: http
-  behavior: domain
-  url: "https://raw.githubusercontent.com/Wacchi-Lorie/clash-rules-backup/main/rule-provider_BaHaMuTe_domain.yaml"
-  path: ./providers/rule-provider_BaHaMuTe_domain.yaml
-  interval: 86400
- YOUTUBE_domain:
-  type: http
-  behavior: domain
-  url: "https://raw.githubusercontent.com/Wacchi-Lorie/clash-rules-backup/main/rule-provider_YOUTUBE_domain.yaml"
-  path: ./providers/rule-provider_YOUTUBE_domain.yaml
-  interval: 86400
- NETFLIX_domain:
-  type: http
-  behavior: domain
-  url: "https://raw.githubusercontent.com/Wacchi-Lorie/clash-rules-backup/main/rule-provider_NETFLIX_domain.yaml"
-  path: ./providers/rule-provider_NETFLIX_domain.yaml
-  interval: 86400
- NETFLIX_ipcidr:
-  type: http
-  behavior: ipcidr
-  url: "https://raw.githubusercontent.com/Wacchi-Lorie/clash-rules-backup/main/rule-provider_NETFLIX_ipcidr.yaml"
-  path: ./providers/rule-provider_NETFLIX_ipcidr.yaml
-  interval: 86400
- TikTok_domain:
-  type: http
-  behavior: domain
-  url: "https://raw.githubusercontent.com/Wacchi-Lorie/clash-rules-backup/main/rule-provider_TikTok_domain.yaml"
-  path: ./providers/rule-provider_TikTok_domain.yaml
-  interval: 86400
- PrimeVideo_domain:
-  type: http
-  behavior: domain
-  url: "https://raw.githubusercontent.com/Wacchi-Lorie/clash-rules-backup/main/rule-provider_PrimeVideo_domain.yaml"
-  path: ./providers/rule-provider_PrimeVideo_domain.yaml
-  interval: 86400
- PrimeVideo_ipcidr:
-  type: http
-  behavior: ipcidr
-  url: "https://raw.githubusercontent.com/Wacchi-Lorie/clash-rules-backup/main/rule-provider_PrimeVideo_ipcidr.yaml"
-  path: ./providers/rule-provider_PrimeVideo_ipcidr.yaml
-  interval: 86400
- DisneyPlus_domain:
-  type: http
-  behavior: domain
-  url: "https://raw.githubusercontent.com/Wacchi-Lorie/clash-rules-backup/main/rule-provider_DisneyPlus_domain.yaml"
-  path: ./providers/rule-provider_DisneyPlus_domain.yaml
-  interval: 86400
- DisneyPlus_ipcidr:
-  type: http
-  behavior: ipcidr
-  url: "https://raw.githubusercontent.com/Wacchi-Lorie/clash-rules-backup/main/rule-provider_DisneyPlus_ipcidr.yaml"
-  path: ./providers/rule-provider_DisneyPlus_ipcidr.yaml
-  interval: 86400
- HBO_domain:
-  type: http
-  behavior: domain
-  url: "https://raw.githubusercontent.com/Wacchi-Lorie/clash-rules-backup/main/rule-provider_HBO_domain.yaml"
-  path: ./providers/rule-provider_HBO_domain.yaml
-  interval: 86400
- HBOMAX_domain:
-  type: http
-  behavior: domain
-  url: "https://raw.githubusercontent.com/Wacchi-Lorie/clash-rules-backup/main/rule-provider_HBOMAX_domain.yaml"
-  path: ./providers/rule-provider_HBOMAX_domain.yaml
-  interval: 86400
- HBOMAX_ipcidr:
-  type: http
-  behavior: ipcidr
-  url: "https://raw.githubusercontent.com/Wacchi-Lorie/clash-rules-backup/main/rule-provider_HBOMAX_ipcidr.yaml"
-  path: ./providers/rule-provider_HBOMAX_ipcidr.yaml
-  interval: 86400
- Emby_domain:
-  type: http
-  behavior: domain
-  url: "https://raw.githubusercontent.com/Wacchi-Lorie/clash-rules-backup/main/rule-provider_Emby_domain.yaml"
-  path: ./providers/rule-provider_Emby_domain.yaml
-  interval: 86400
- Emby_ipcidr:
-  type: http
-  behavior: ipcidr
-  url: "https://raw.githubusercontent.com/Wacchi-Lorie/clash-rules-backup/main/rule-provider_Emby_ipcidr.yaml"
-  path: ./providers/rule-provider_Emby_ipcidr.yaml
-  interval: 86400
- Spotify_domain:
-  type: http
-  behavior: domain
-  url: "https://raw.githubusercontent.com/Wacchi-Lorie/clash-rules-backup/main/rule-provider_Spotify_domain.yaml"
-  path: ./providers/rule-provider_Spotify_domain.yaml
-  interval: 86400
- Spotify_ipcidr:
-  type: http
-  behavior: ipcidr
-  url: "https://raw.githubusercontent.com/Wacchi-Lorie/clash-rules-backup/main/rule-provider_Spotify_ipcidr.yaml"
-  path: ./providers/rule-provider_Spotify_ipcidr.yaml
-  interval: 86400
- JP_KR_media_domain:
-  type: http
-  behavior: domain
-  url: "https://raw.githubusercontent.com/Wacchi-Lorie/clash-rules-backup/main/rule-provider_RiHanMeiTi_domain.yaml"
-  path: ./providers/rule-provider_RiHanMeiTi_domain.yaml
-  interval: 86400
- JP_KR_media_ipcidr:
-  type: http
-  behavior: ipcidr
-  url: "https://raw.githubusercontent.com/Wacchi-Lorie/clash-rules-backup/main/rule-provider_RiHanMeiTi_ipcidr.yaml"
-  path: ./providers/rule-provider_RiHanMeiTi_ipcidr.yaml
-  interval: 86400
- HK_TW_media_domain:
-  type: http
-  behavior: domain
-  url: "https://raw.githubusercontent.com/Wacchi-Lorie/clash-rules-backup/main/rule-provider_GangTaiMeiTI_2_domain.yaml"
-  path: ./providers/rule-provider_GangTaiMeiTI_2_domain.yaml
-  interval: 86400
- Global_media_domain:
-  type: http
-  behavior: domain
-  url: "https://raw.githubusercontent.com/Wacchi-Lorie/clash-rules-backup/main/rule-provider_GuoWaiMeiTi_2_domain.yaml"
-  path: ./providers/rule-provider_GuoWaiMeiTi_2_domain.yaml
-  interval: 86400
- Global_media_ipcidr:
-  type: http
-  behavior: ipcidr
-  url: "https://raw.githubusercontent.com/Wacchi-Lorie/clash-rules-backup/main/rule-provider_GuoWaiMeiTi_2_ipcidr.yaml"
-  path: ./providers/rule-provider_GuoWaiMeiTi_2_ipcidr.yaml
-  interval: 86400
- BilibiliHMT_domain:
-  type: http
-  behavior: domain
-  url: "https://raw.githubusercontent.com/Wacchi-Lorie/clash-rules-backup/main/rule-provider_BilibiliHMT_domain.yaml"
-  path: ./providers/rule-provider_BilibiliHMT_domain.yaml
-  interval: 86400
- BilibiliHMT_ipcidr:
-  type: http
-  behavior: ipcidr
-  url: "https://raw.githubusercontent.com/Wacchi-Lorie/clash-rules-backup/main/rule-provider_BilibiliHMT_ipcidr.yaml"
-  path: ./providers/rule-provider_BilibiliHMT_ipcidr.yaml
-  interval: 86400
- IqiyiHMT_domain:
-  type: http
-  behavior: domain
-  url: "https://raw.githubusercontent.com/Wacchi-Lorie/clash-rules-backup/main/rule-provider_IqiyiHMT_domain.yaml"
-  path: ./providers/rule-provider_IqiyiHMT_domain.yaml
-  interval: 86400
- IqiyiHMT_ipcidr:
-  type: http
-  behavior: ipcidr
-  url: "https://raw.githubusercontent.com/Wacchi-Lorie/clash-rules-backup/main/rule-provider_IqiyiHMT_ipcidr.yaml"
-  path: ./providers/rule-provider_IqiyiHMT_ipcidr.yaml
-  interval: 86400
- Global_website_domain:
-  type: http
-  behavior: domain
-  url: "https://raw.githubusercontent.com/Wacchi-Lorie/clash-rules-backup/main/rule-provider_GuoWaiWangZhan_domain.yaml"
-  path: ./providers/rule-provider_GuoWaiWangZhan_domain.yaml
-  interval: 86400
- Global_website_ipcidr:
-  type: http
-  behavior: ipcidr
-  url: "https://raw.githubusercontent.com/Wacchi-Lorie/clash-rules-backup/main/rule-provider_GuoWaiWangZhan_ipcidr.yaml"
-  path: ./providers/rule-provider_GuoWaiWangZhan_ipcidr.yaml
-  interval: 86400
- PrivateTracker_domain:
-  type: http
-  behavior: domain
-  url: "https://raw.githubusercontent.com/Wacchi-Lorie/clash-rules-backup/main/rule-provider_PrivateTracker_domain.yaml"
-  path: ./providers/rule-provider_PrivateTracker_domain.yaml
-  interval: 86400
- Microsoft_domain:
-  type: http
-  behavior: domain
-  url: "https://raw.githubusercontent.com/Wacchi-Lorie/clash-rules-backup/main/rule-provider_WeiRuanFuWu_domain.yaml"
-  path: ./providers/rule-provider_WeiRuanFuWu_domain.yaml
-  interval: 86400
- AppleAll_domain:
-  type: http
-  behavior: domain
-  url: "https://raw.githubusercontent.com/Wacchi-Lorie/clash-rules-backup/main/rule-provider_AppleAll_domain.yaml"
-  path: ./providers/rule-provider_AppleAll_domain.yaml
-  interval: 86400
- AppleAll_ipcidr:
-  type: http
-  behavior: ipcidr
-  url: "https://raw.githubusercontent.com/Wacchi-Lorie/clash-rules-backup/main/rule-provider_AppleAll_ipcidr.yaml"
-  path: ./providers/rule-provider_AppleAll_ipcidr.yaml
-  interval: 86400
- CN_website_domain:
-  type: http
-  behavior: domain
-  url: "https://raw.githubusercontent.com/Wacchi-Lorie/clash-rules-backup/main/rule-provider_GuoNeiWangZhan_domain.yaml"
-  path: ./providers/rule-provider_GuoNeiWangZhan_domain.yaml
-  interval: 86400
- CN_website_ipcidr:
-  type: http
-  behavior: ipcidr
-  url: "https://raw.githubusercontent.com/Wacchi-Lorie/clash-rules-backup/main/rule-provider_GuoNeiWangZhan_ipcidr.yaml"
-  path: ./providers/rule-provider_GuoNeiWangZhan_ipcidr.yaml
   interval: 86400
 ```
