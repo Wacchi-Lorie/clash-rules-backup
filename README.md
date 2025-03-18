@@ -5,49 +5,49 @@ rule-providers:
   type: http
   behavior: domain
   url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt"
-  path: ./ruleset/reject.yaml
+  path: ./providers/reject.yaml
   interval: 86400
  proxy:
   type: http
   behavior: domain
   url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/proxy.txt"
-  path: ./ruleset/proxy.yaml
+  path: ./providers/proxy.yaml
   interval: 86400
  CN_DIRECT:
   type: http
   behavior: domain
   url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/direct.txt"
-  path: ./ruleset/direct.yaml
+  path: ./providers/CN_DIRECT.yaml
   interval: 86400
  private:
   type: http
   behavior: domain
   url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/private.txt"
-  path: ./ruleset/private.yaml
+  path: ./providers/private.yaml
   interval: 86400
  gfw:
   type: http
   behavior: domain
   url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/gfw.txt"
-  path: ./ruleset/gfw.yaml
+  path: ./providers/gfw.yaml
   interval: 86400
  tld-not-cn:
   type: http
   behavior: domain
   url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/tld-not-cn.txt"
-  path: ./ruleset/tld-not-cn.yaml
+  path: ./providers/tld-not-cn.yaml
   interval: 86400
  cncidr:
   type: http
   behavior: ipcidr
   url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/cncidr.txt"
-  path: ./ruleset/cncidr.yaml
+  path: ./providers/cncidr.yaml
   interval: 86400
  lancidr:
   type: http
   behavior: ipcidr
   url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/lancidr.txt"
-  path: ./ruleset/lancidr.yaml
+  path: ./providers/lancidr.yaml
   interval: 86400
 # a-dove-is-dumb domains
  FuckAdobe:
@@ -61,7 +61,7 @@ rule-providers:
   type: http
   behavior: classical
   url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Niconico/Niconico_No_Resolve.yaml"
-  path: ./ruleset/Niconico.yaml
+  path: ./providers/Niconico.yaml
   interval: 86400
  Steam:
   type: http
@@ -188,19 +188,25 @@ rule-providers:
  GamePlatform_domain:
   type: http
   behavior: domain
-  url: "https://cdn.jsdelivr.net/gh/Wacchi-Lorie/clash-rules-backup/rule-provider_YouXiPingTai_domain.yaml"
-  path: ./providers/rule-provider_YouXiPingTai_domain.yaml
+  url: "https://cdn.jsdelivr.net/gh/Wacchi-Lorie/clash-rules-backup/GamePlatform_domain.yaml"
+  path: ./providers/GamePlatform_domain.yaml
   interval: 86400
  SocialAPP_domain:
   type: http
   behavior: domain
-  url: "https://cdn.jsdelivr.net/gh/Wacchi-Lorie/clash-rules-backup@main/rule-provider_LiaoTianRuanJian_domain.yaml"
-  path: ./providers/rule-provider_LiaoTianRuanJian_domain.yaml
+  url: "https://cdn.jsdelivr.net/gh/Wacchi-Lorie/clash-rules-backup@main/SocialAPP_domain.yaml"
+  path: ./providers/SocialAPP_domain.yaml
   interval: 86400
  SocialAPP_ipcidr:
   type: http
   behavior: ipcidr
-  url: "https://cdn.jsdelivr.net/gh/Wacchi-Lorie/clash-rules-backup@main/rule-provider_LiaoTianRuanJian_ipcidr.yaml"
-  path: ./providers/rule-provider_LiaoTianRuanJian_ipcidr.yaml
+  url: "https://cdn.jsdelivr.net/gh/Wacchi-Lorie/clash-rules-backup@main/SocialAPP_ipcidr.yaml"
+  path: ./providers/SocialAPP_ipcidr.yaml
+  interval: 86400
+ TAG_Exempt:
+  type: http
+  behavior: classical
+  url: "https://cdn.jsdelivr.net/gh/Wacchi-Lorie/clash-rules-backup@main/tag_exempt.yaml"
+  path: ./providers/TAG_Exempt.yaml
   interval: 86400
 ```
